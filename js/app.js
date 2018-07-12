@@ -158,7 +158,7 @@ let interval;
 
 function startTimer() {
     interval = setInterval(function() {
-        timer.innerHTML = `${min}  ${sec}  `;
+        timer.innerHTML = `${min} : ${sec}  `;
         sec++;
 
         if (sec == 60) {
