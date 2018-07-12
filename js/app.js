@@ -168,7 +168,7 @@ function startTimer() {
     }, 1000);
 }
 
-
+document.getElementById("win").style.display="none"
 //congratulations popup
 let modal = document.getElementById('win');
 let span = document.getElementsByClassName("close")[0];
