@@ -123,29 +123,6 @@ allCards.forEach(function(card) {
     });
 });
 
-// Handles primary game logic of game
-var onClick = function() {
-    if (isValid( $(this) )) {
-
-        if (open.length === 0) {
-            openCard( $(this) );
-
-        } else if (open.length === 1) {
-            openCard( $(this) );
-            moveCounter++;
-            updateMoveCounter();
-
-            if (checkMatch()) {
-                setTimeout(setMatch, 300);
-
-            } else {
-                setTimeout(resetOpen, 700);
-
-            }
-        }
-    }
-};
-
 //count player moves
 function moveCount() {
     moves++;
@@ -226,40 +203,3 @@ const refreshIcon = document.body.querySelector('.restart');
 	  refreshIcon.addEventListener('click', function () {
   	  location.reload();
 });
-
-function congratulations(){
-    if (matchedCard.length == 16){
-        clearInterval(interval);
-        finalTime = timer.innerHTML;
-
-        // show congratulations modal
-        modal.classList.add("show");
-
-        // declare star rating variable
-        var starRating = document.querySelector(".stars").innerHTML;
-
-        //showing move, rating, time on modal
-        document.getElementById("finalMove").innerHTML = moves;
-        document.getElementById("starRating").innerHTML = starRating;
-        document.getElementById("totalTime").innerHTML = finalTime;
-
-        //closeicon on modal
-        closeModal();
-    };
-}
-
-
-// @description close icon on modal
-function closeModal(){
-    closeicon.addEventListener("click", function(e){
-        modal.classList.remove("show");
-        startGame();
-    });
-}
-
-
-// @desciption for user to play Again 
-function playAgain(){
-    modal.classList.remove("show");
-    startGame();
-}
