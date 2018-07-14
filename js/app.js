@@ -186,7 +186,7 @@ function openModal() {
     timeScore.innerHTML = `${min}  ${sec} `;
 
     let starScore = document.querySelector('.final-stars');
-    let starRating = document.querySelector('#star-rating').innerHTML;
+    let starRating = document.querySelector('.stars').innerHTML;
     starScore.innerHTML = starRating;
 
     span.onclick = function() {
