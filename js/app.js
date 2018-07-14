@@ -123,6 +123,7 @@ allCards.forEach(function(card) {
     });
 });
 
+
 //count player moves
 function moveCount() {
     moves++;
@@ -168,7 +169,7 @@ function startTimer() {
     }, 1000);
 }
 
-document.getElementById("win").style.display="none"
+
 //congratulations popup
 let modal = document.getElementById('win');
 let span = document.getElementsByClassName("close")[0];
@@ -198,8 +199,24 @@ function openModal() {
         }
     }
 }
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 //restart game
 const refreshIcon = document.body.querySelector('.restart');
 	  refreshIcon.addEventListener('click', function () {
   	  location.reload();
 });
+
+/*let starRating = document.querySelector('.stars').innerHTML;
+    starScore.innerHTML = starRating;
+*/
