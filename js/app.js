@@ -217,6 +217,8 @@ const refreshIcon = document.body.querySelector('.restart');
   	  location.reload();
 });
 
-/*let starRating = document.querySelector('.stars').innerHTML;
+
+/*
+    let starRating = document.querySelector('.stars').innerHTML;
     starScore.innerHTML = starRating;
 */
